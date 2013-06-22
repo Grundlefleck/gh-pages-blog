@@ -23,12 +23,12 @@
 # url : http://thedereck.github.io
 # email : thedereck@thedereck.com
 # author : Dereck Curry
-name : gh-pages-blog
-brand : gh-pages-blog
-description : The Official gh-pages-blog GitHub Page
-url : http://thedereck.github.io/gh-pages-blog
-email : thedereck@thedereck.com
-author: Dereck Curry
+name : Grundlefleck's Blog
+brand : Grundlefleck's Blog
+description : Thoughts on stuff. And all that.
+url : https://github.com/Grundlefleck/gh-pages-blog
+email : grundlefleck+ghblog@gmail.com
+author: Graham Allan
 
 
 # The following is a list of files to exclude from inclusion in the
@@ -39,7 +39,7 @@ exclude : [ README.md , version.txt ]
 # Replace the number with the default number of blot posts you want on each
 # page. A value of 0 will indicate that you don't want to paginate, and all
 # blog posts will be on the index page.
-paginate : 10
+paginate : 3
 
 
 # To put a alert or notice on every page served, change the appropriate value
@@ -168,20 +168,20 @@ sections:
   brief_bio :
     enabled : true
     image :
-      enabled : false
-      url : false
+      enabled : true
+      url : http://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
     content :
       enabled : true
     social_links :
       enabled : false
     github_projects :
-      enabled : true
+      enabled : false
   social_links :
     enabled : false
   github_projects :
     enabled : false
   external_links :
-    enabled : true
+    enabled : false
   archive :
     enabled : false
   categories :
