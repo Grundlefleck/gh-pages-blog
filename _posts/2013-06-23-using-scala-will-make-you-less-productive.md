@@ -1,7 +1,6 @@
 ---
 layout : post
 title : Using Scala Will Make You Less Productive
-subtitle: ... no link-bait here. Oh no, sir.
 tags:
  - Scala
  - Java
@@ -33,14 +32,17 @@ So what good can I see in Scala?
 
 ####Functional Idioms in the Standard Libraries####
 
-Walking hand in hand with lambdas is the support available in the Scala SDK. Want to take a collection of elements, filter by some property, and convert the results into another type? `myStuff.filter(x => x.isInteresting).map(x => toNewThing(x)`[\*](#footnote_1) is right there, available as soon as you're in Scala land. In Java, this can be achieved once you add a library like Guava to your classpath, but as previously mentioned, there will be lot of noise that doesn't add anything. 
+Walking hand in hand with lambdas is the support available in the Scala SDK. Want to take a collection of elements, filter by some property, and convert the results into another type? `myStuff.filter(x => x.isInteresting).map(x => toNewThing(x))`[\*](#footnote_1) is right there, available as soon as you're in Scala land. In Java, this can be achieved once you add a library like Guava to your classpath, but as previously mentioned, there will be lot of noise that doesn't add anything. 
 
 I like functional operations. I like filter, map, zip, fold. I like that operation I can only seem to remember as 'groupBy' but probably has a more traditional name. I like immutability and programming without side-effects. I use those operations and program that way today in Java, supplemented by Guava. In Scala it's easier syntax and it's more easily available.
 
 
 ####Type Inference####
 
-There are a lot of places in Scala where you can omit type information. `val x = "Hello"` is a simple example. The compiler is a clever cookie, and realises that you probably mean `val x: String = "Hello"`, so you don't need to bother telling it that. There's a double-edged sword here, in that now you have the ability to omit type information, you will omit type information, even when it would be useful to include it. If used sensibly, you can make code clearer. A tiny smattering of type inference exists in Java, but it's not in the same league. 
+There are a lot of places in Scala where you can omit type information. `val x = "Hello"` is a simple example. The compiler is a clever cookie, and realises that you probably mean `val x: String = "Hello"`, so you don't need to bother telling it that. A tiny smattering of type inference exists in Java, but it's not in the same league. 
+
+There's a double-edged sword here, in that now you have the ability to omit type information, you will omit type information, even when it would be useful to include it. Care needs to be taken to make sure that type inference is actually helping to make code clearer. Everyone who commits a chunk of code relying on type inference should be forced to play a game of "Pin The Tail On The Type". First blindfold the author, spin them round a couple of times, then expose them to the code they've just written. If they can't immediately identify all the types necessary to understand what's going on, you get to hit them with sticks until candy falls out. Okay, I've mixed up my party games metaphors, but you get the point.
+
 
 ####Case Classes####
 
@@ -56,7 +58,7 @@ In a hypothetical world where I am offered a choice between introducing either l
 
 I won't go into much detail here, but some other good things are:
  * reduced boilerplate in general
- * an eminently reasonable Benevolent Dictator For Life in Martin Odersky. I have considered that every time I find something really frustrating about Scala, I'm just going to read a blog post, forum comment, or StackOverflow answer from Scala's BDFL. I've generally found his stance, or explanations, to be so god damn agreeable that I just can't keep up the caremad. 
+ * an eminently reasonable Benevolent Dictator For Life in Martin Odersky. I have considered that every time I find something really frustrating about Scala, I'm just going to read a blog post, forum comment, or StackOverflow answer from Scala's BDFL. I've generally found his stance, or explanations, to be so god damn agreeable that I just can't keep up the [caremad](http://www.urbandictionary.com/define.php?term=caremad). 
  * the actor model with Akka, providing a simplified concurrency model. Technically Akka's Actors are accessible from Java as well, but I suspect they'll be less well supported in the Java community (disclaimer: I've not looked).
  * inter op with existing Java libraries. Joda Time is a great example. There's no de facto Scala date and time library because, well, Joda Time is there, accessible, and good (not just good _enough_, actually good).
  
