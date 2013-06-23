@@ -5,8 +5,6 @@ subtitle : Giving credit where credit's due.
 order : 100
 ---
 
-First and foremost, thanks to [GitHub](http://www.github.com) for being so awesome.
+The engine for this blog is open-source, and available on GitHub [here][https://github.com/thedereck/gh-pages-blog]. Thanks to [thedereck][https://github.com/thedereck] and [GitHub][https://github.com/] for a pretty darn neat way to publish a blog.
 
-Next, thanks to [Bootstrap](http://twitter.github.com/bootstrap/) for being so awesome.
-
-Finally, thanks to [Font Awesome](http://fortawesome.github.com/Font-Awesome/) for being... Well, for being so awesome.
+Original credits for the blogging software available [here][http://thedereck.github.io/gh-pages-blog/credits.html]
