@@ -134,7 +134,7 @@ What do these activities have in common? They are issues you spend time on, that
 
 So... in conclusion. Scala will make you less productive, for some period of time, and if you do get more productive in it, it probably won't matter that much anyway.
 
-Told you the conclusion would be dissapointing.
+Told you the conclusion would be disappointing.
 
 
 
