@@ -177,7 +177,7 @@ sections:
     github_projects :
       enabled : false
   social_links :
-    enabled : false
+    enabled : true
   github_projects :
     enabled : false
   external_links :
@@ -220,7 +220,7 @@ navbar :
   github_projects :
     enabled : false
   social_links :
-    enabled : false
+    enabled : true
   external_links :
     enabled : false
 
@@ -279,28 +279,18 @@ navbar :
 #       font_awesome_icon : icon-twitter
 #       url : http://www.twitter.com/_TheDereck_
 social_links :
-  follow_name : Dereck Curry For Updates About gh-pages-blog
+  follow_name : Grundlefleck
   links :
     - link :
       enabled : true
       name : GitHub
       font_awesome_icon : icon-github-alt
-      url : https://github.com/TheDereck
-    - link :
-      enabled : true
-      name: Google+
-      font_awesome_icon : icon-google-plus
-      url : https://plus.google.com/109660251296662910676?rel=author
-    - link :
-      enabled : true
-      name : Linkedin
-      font_awesome_icon : icon-linkedin
-      url : http://www.linkedin.com/in/dereckcurry
+      url : https://github.com/Grundlefleck
     - link :
       enabled : true
       name : Twitter
       font_awesome_icon : icon-twitter
-      url : http://www.twitter.com/_TheDereck_
+      url : http://www.twitter.com/Grundlefleck
 
 
 # These are a list of GitHub projects that the blog owner would like to
