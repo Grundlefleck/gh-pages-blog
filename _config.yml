@@ -173,7 +173,7 @@ sections:
     content :
       enabled : true
     social_links :
-      enabled : true
+      enabled : false
     github_projects :
       enabled : false
   social_links :
