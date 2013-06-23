@@ -1,29 +1,29 @@
 ---
 layout : post
 title : Using Scala Will Make You Less Productive
-subtitle: ... no linkbait here. Oh no, sir.
+subtitle: ... no link-bait here. Oh no, sir.
 tags:
  - Scala
  - Java
  - Productivity
 ---
-... in an uncontrolled study, in which I reflect on my personal experience, I feel like I'm less productive. Therefore, you will be less productive as well, QED. Well, I think I can safely tick the 'science' checkbox.
+... in an uncontrolled study, in which I reflect on my personal experience, I feel like I'm less productive. Therefore, you will be less productive as well, QED. Well, I think I can safely tick the 'science' check box.
 
 In this lengthy post, I'll be describing my experience moving to Scala. Using a cavalcade of flawed data; logical fallacies; biased opinion; startling lack of citations; and basic nonsense, I will convince you that using Scala will make you less productive. I will finish with an underwhelming and unexciting conclusion. You have been warned.
 
 ###Scala Experience To Date###
 
-I first began using Scala professionally in December 2012. Prior to that my exposure had been light: reading [Programming In Scala](http://www.artima.com/shop/programming_in_scala_2ed) and the odd blog entry, and occasionally firing up the REPL to try out examples. Since December I've worked on two projects, which puts me at about the six-month mark. The projects were not exactly revolutionary: single page web apps using [Typesafe](http://typesafe.com/)'s [Play! framework](http://www.playframework.com/); some data entry, some calculations; a MySQL database. Bigger than that last ToDo list app you built, smaller than your average Sprawling Monolith Enterprise System&trade;. The point being that I've not used Scala for a pretend, toy app, but also, the projects have not been around long enough to reflect on those development choices that you have to slowly watch unfold over months and years.
+I first began using Scala professionally in December 2012. Prior to that my exposure had been light: reading [Programming In Scala](http://www.artima.com/shop/programming_in_scala_2ed) and the odd blog entry, and occasionally firing up the REPL to try out examples. Since December I've worked on two projects, which puts me at about the six-month mark. The projects were not exactly revolutionary: single page web apps using [Typesafe](http://typesafe.com/)'s [Play! framework](http://www.playframework.com/); some data entry, some calculations; a MySQL database. Bigger than that last To Do list app you built, smaller than your average Sprawling Monolith Enterprise System&trade;. The point being that I've not used Scala for a pretend, toy app, but also, the projects have not been around long enough to reflect on those development choices that you have to slowly watch unfold over months and years.
 
 ### General Experience To Date ###
 
 I've been developing software professionally for a whopping 3 years. The majority of that was in Java and JavaScript, although I did have a few months of Clojure development in a scheduled-for-but-put-on-hold-for-business-reasons production application. Plus also throwing in occasional forays into Bash and Python, or whatever, when I need something quick and dirty that I'll likely throw away. I'm nowhere near being the best developer in the world, but nowhere near the worst either.
 
-Within Java I was and am a rigourous TDD'er, a fan of SOLID principles, a proponent of minimizing mutability, a supporter of functional techniques. I like static typing, and I like to find my silly coding mistakes early. Despite my attempt to cultivate a neckbeard I have no experience of Haskell. What have I done that you should listen to a word I have to say? Nothing really, I haven't found mindshare with a new programming language, or saved trillions of Altairian dollars conceiving the one true web framework, or even worked on something you'll have heard of. But you've somehow ended up reading my ramblings here, so I'd suggest I'm probably not distracting you from curing world hunger, so what have you got to lose?
+Within Java I was and am a rigorous TDD'er, a fan of SOLID principles, a proponent of minimizing mutability, a supporter of functional techniques. I like static typing, and I like to find my silly coding mistakes early. Despite my attempt to cultivate a neckbeard I have no experience of Haskell. What have I done that you should listen to a word I have to say? Nothing really, I haven't found mindshare with a new programming language, or saved trillions of Altairian dollars conceiving the one true web framework, or even worked on something you'll have heard of. But you've somehow ended up reading my ramblings here, so I'd suggest I'm probably not distracting you from curing world hunger, so what have you got to lose?
 
 ###The Good Things&trade; With Scala###
 
-It would take the most ardent Java fanboy to claim there is nothing good about Scala. I'm not married to Java, so I don't have to view it through rose-tinted glasses, or defend its honour. I don't really have a dog in this fight. Languages will come and go, and COBOL developers can still make a living, so I'm not personally invested in disparaging Scala for funsies. Of course if you're a zealout, on either side, you're going to go ahead and claim I'm biased or I have an agenda anyway.
+It would take the most ardent Java fanboy to claim there is nothing good about Scala. I'm not married to Java, so I don't have to view it through rose-tinted glasses, or defend its honour. I don't really have a dog in this fight. Languages will come and go, and COBOL developers can still make a living, so I'm not personally invested in disparaging Scala for funsies. Of course if you're a zealot, on either side, you're going to go ahead and claim I'm biased or I have an agenda anyway.
 
 So what good can I see in Scala?
 
@@ -56,9 +56,9 @@ In a hypothetical world where I am offered a choice between introducing either l
 
 I won't go into much detail here, but some other good things are:
  * reduced boilerplate in general
- * an eminently reasonable Benevolent Dictator For Life in Martin Odersky. I have considered that every time I find something really frustrating about Scala, I'm just going to read a blog post, forum comment, or StackOverflow answer from Scala's BDFL. I've generally found his stance, or explanations, to be so goddamn agreeable that I just can't keep up the caremad. 
+ * an eminently reasonable Benevolent Dictator For Life in Martin Odersky. I have considered that every time I find something really frustrating about Scala, I'm just going to read a blog post, forum comment, or StackOverflow answer from Scala's BDFL. I've generally found his stance, or explanations, to be so god damn agreeable that I just can't keep up the caremad. 
  * the actor model with Akka, providing a simplified concurrency model. Technically Akka's Actors are accessible from Java as well, but I suspect they'll be less well supported in the Java community (disclaimer: I've not looked).
- * interop with existing Java libraries. Joda Time is a great example. There's no de facto Scala date and time library because, well, Joda Time is there, accessible, and good (not just good _enough_, actually good).
+ * inter op with existing Java libraries. Joda Time is a great example. There's no de facto Scala date and time library because, well, Joda Time is there, accessible, and good (not just good _enough_, actually good).
  
 Hopefully I've convinced you that I'm not a foamy-mouthed Scala hater, having spent almost 1000 words describing my favourite bits. That should give me a bit of credibility for some of the bitching and moaning that's on it's way.
 
@@ -83,7 +83,7 @@ And that's about it. That's the most important things an IDE offers me. You coul
 
 ####Overuse of Operator Overloading####
 
-Yes, yes, it's not operator overloading, it's allowing symbols for method names, totally different. You're right; it's much worse. You can still overload those comfortable, familiar operators, like `+` or `*` to do unexpected things. Not only that, you can use whole raft of unexpected symbols to do unexpected things. Symbols are great when they confer meaning. Over several years in school I learned what many symbols mean: `+`, `-`, `/`, `*`, `~` all have meaning. Seeing `BigDecimal a = x.plus(y)` is a drag compared to `a = x + y`. Brilliant use of the `+` symbol as a method name. But now let's take sbt as an example. Using the `%` symbol to delimit artifact coordinate information is unnecessary and _gratuitious_. Using `%%` to mean, very specifically, "append the version of Scala to the version of this dependency" is a slap in the face to the principle of least astonishment. This, dare I say it, "spiteful" use of symbols as method names appears in several of the libraries I've been working with: 
+Yes, yes, it's not operator overloading, it's allowing symbols for method names, totally different. You're right; it's much worse. You can still overload those comfortable, familiar operators, like `+` or `*` to do unexpected things. Not only that, you can use whole raft of unexpected symbols to do unexpected things. Symbols are great when they confer meaning. Over several years in school I learned what many symbols mean: `+`, `-`, `/`, `*`, `~` all have meaning. Seeing `BigDecimal a = x.plus(y)` is a drag compared to `a = x + y`. Brilliant use of the `+` symbol as a method name. But now let's take sbt as an example. Using the `%` symbol to delimit artefact coordinate information is unnecessary and _gratuitous_. Using `%%` to mean, very specifically, "append the version of Scala to the version of this dependency" is a slap in the face to the principle of least astonishment. This, dare I say it, "spiteful" use of symbols as method names appears in several of the libraries I've been working with: 
 ScalaQuery; specs2; Akka. Ironically, the least friendly of them all, scalaz, actually gets a pass in my book. It's so thoroughly laden with unfamiliar symbols, like `|@|`, `<$>` and `<<*>>` (all pronounced "pleasejustletmeusehaskell") that they at least serve as a warning. That usage of symbols is fine if your goal is to provide a library with more functional concepts than the Scala SDK. Not cool if you are the de facto standard build tool, that virtually all projects will need. 
  
 ####Implicit####
