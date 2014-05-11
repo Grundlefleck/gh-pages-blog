@@ -537,3 +537,6 @@ analytics :
   google_analytics :
     enabled : true
     tracking_id : UA-41956459-1
+
+    
+markdown: kramdown
