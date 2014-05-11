@@ -1,3 +1,14 @@
+---
+layout : post
+title : What My Vote In Scottish Independence Will Not Be About
+tags:
+ - not-software
+ - Scotland
+ - independence
+ - indyref
+---
+
+
 This September, the people of Scotland will vote in a [referendum](http://en.wikipedia.org/wiki/Scottish_independence_referendum,_2014) to decide if we should leave the United Kingdom, and become an independent country. There are many questions about what would happen to Scotland and the rest of the UK (rUK) in the event of a Yes vote. Questions that nobody can definitively answer. I expect I will vote Yes, in favour of independence.
 
 While visiting London over the past couple of years, I've had several conversations about the referendum with colleagues and acquaintances. Since having these conversations, I've found it's easier to articulate what my vote will not be about, than what it will. Below is a list of what my vote will not be about.
