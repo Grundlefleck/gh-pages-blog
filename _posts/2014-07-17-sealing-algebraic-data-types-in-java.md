@@ -8,7 +8,7 @@ tags:
  - Java
 ---
 
-Recently I caught up on Dick Wall's [Devoxx UK talk](http://parleys.com/play/53b15afee4b0543940d9e5d8/chapter15/about), "What have the Monads ever done for us?"[\*](#footnote_1). Dick does a great job of introducing terms such as "monoid", "functor" and "monad" in a way that's easy to grasp, even for Java-damaged minds like my own. I thoroughly recommend watching the talk to all developers who have heard these terms and want a simple way to understand them, without trudging through tutorials using silly metaphors like space suits or burritos.
+Recently I caught up on Dick Wall's [Devoxx UK talk](http://parleys.com/play/53b15afee4b0543940d9e5d8), "What have the Monads ever done for us?"[\*](#footnote_1). Dick does a great job of introducing terms such as "monoid", "functor" and "monad" in a way that's easy to grasp, even for Java-damaged minds like my own. I thoroughly recommend watching the talk to all developers who have heard these terms and want a simple way to understand them, without trudging through tutorials using silly metaphors like space suits or burritos.
 
 Also, achievement unlocked: [met Dick Wall at the speaker's dinner](https://www.flickr.com/photos/125714253@N02/14489008396/in/set-72157645322154176). A thoroughly (and completely predictably based on the Java Posse podcasts!) lovely chap.
 
