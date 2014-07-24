@@ -488,8 +488,8 @@ rss :
     enabled : true
     ttl : 300
   image :
-    enabled : false
-    image : false
+    enabled : true
+    image : http://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
 
 
 # This determines whether Disqus is enabled or disabled for the comments
