@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Configuring Google's AutoValue
+title : Configuring Google AutoValue, the Java Annotation Processor For Busting Boilerplate
 tags:
  - boilerplate
  - Java
