@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Configuring Google AutoValue, the Java Annotation Processor For Busting Boilerplate
+title : A Quest For Easier Value Objects In Java, Part I: Configuring Google's AutoValue
 tags:
  - boilerplate
  - Java
@@ -13,7 +13,7 @@ tags:
 
 Despite my numerous gripes about [working day-to-day in Scala](http://grundlefleck.github.io/2013/06/23/using-scala-will-make-you-less-productive.html), one of the things I do love about it are case classes. The ability to define an immutable class which will have `equals()` and `hashCode()` methods, a decent `toString()`, accessor methods (just say no to setters, kids) in a single line of code, is such a breath of fresh air compared to Java. Bleh, all that boilerplate just for a value object with a few fields.
 
-Well, a team at Google think they have a decent answer for this very problem in Java: [AutoValue](https://github.com/google/auto/tree/master/value). 
+Well, a team at Google think they have a decent answer for this very problem in Java: [AutoValue]h(ttps://github.com/google/auto/tree/master/value). 
 
 AutoValue is designed to take the boilerplate out of writing [value objects](http://martinfowler.com/bliki/ValueObject.html). Using Java's [standardised annotation processing mechanism](https://jcp.org/en/jsr/detail?id=269), you define a class with the properties you want, and a code generator produces all that boilerplate for you. You don't have to write that crap, but even better, you don't have to read it either.
 
