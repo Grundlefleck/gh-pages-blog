@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Google AutoValue: Easier Value Objects In Java, Part 1 - Configuration
+title : Google AutoValue - Easier Value Objects In Java (Part 1, Configuration)
 tags:
  - boilerplate
  - Java
