@@ -26,7 +26,7 @@
 name : Grundlefleck's Blog
 brand : Grundlefleck's Blog
 description : Thoughts on software-y stuff. And all that.
-url : http://grundlefleck.github.io
+url : https://grundlefleck.github.io
 email : grundlefleck+ghblog@gmail.com
 author: Graham Allan
 
@@ -169,7 +169,7 @@ sections:
     enabled : true
     image :
       enabled : true
-      url : http://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
+      url : https://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
     content :
       enabled : true
     social_links :
@@ -290,7 +290,7 @@ social_links :
       enabled : true
       name : Twitter
       font_awesome_icon : icon-twitter
-      url : http://www.twitter.com/Grundlefleck
+      url : https://www.twitter.com/Grundlefleck
 
 
 # These are a list of GitHub projects that the blog owner would like to
@@ -348,7 +348,7 @@ external_links :
   links :
     - link :
       name : The Dereck
-      url: http://thedereck.github.io
+      url: https://thedereck.github.io
 
 
 # These are the bootstrap settings. These bootstrap settings will control both
