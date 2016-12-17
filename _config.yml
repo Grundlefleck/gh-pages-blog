@@ -26,7 +26,7 @@
 name : Grundlefleck's Blog
 brand : Grundlefleck's Blog
 description : Thoughts on software-y stuff.
-url : http://grundlefleck.github.io
+url : https://grundlefleck.github.io
 email : grundlefleck+ghblog@gmail.com
 author: Graham Allan
 
@@ -169,7 +169,7 @@ sections:
     enabled : true
     image :
       enabled : true
-      url : http://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
+      url : https://www.gravatar.com/avatar/71f8f2fa409ea5ce2757c8d490ece924.png
     content :
       enabled : true
     social_links :
