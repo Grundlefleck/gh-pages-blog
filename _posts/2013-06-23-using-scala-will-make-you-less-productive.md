@@ -10,41 +10,41 @@ tags:
 
 In this lengthy post, I'll share my thoughts and opinions on Scala, and moving to it for day-to-day coding. Using a cavalcade of flawed data; logical fallacies; biased opinion; startling lack of citations; and basic nonsense, I will convince you that using Scala will make you less productive. I will finish with an underwhelming and unexciting conclusion. You have been warned.
 
-###Scala Experience To Date###
+### Scala Experience To Date
 
 I first began using Scala professionally in December 2012. Prior to that my exposure had been light: reading [Programming In Scala](http://www.artima.com/shop/programming_in_scala_2ed) and the odd blog entry, and occasionally firing up the REPL to try out examples. Since December I've worked on two projects, which puts me at about the six-month mark. The projects were not exactly revolutionary: single page web apps using [Typesafe](http://typesafe.com/)'s [Play! framework](http://www.playframework.com/); some data entry, some calculations; a MySQL database. Bigger than that last To Do list app you built, smaller than your average Sprawling Monolith Enterprise System&trade;. The point being that I've not used Scala for a pretend, toy app, but also, the projects have not been around long enough to reflect on those development choices that you have to slowly watch unfold over months and years.
 
-### General Experience To Date ###
+### General Experience To Date
 
 I've been developing software professionally for a whopping 3 years. The majority of that was in Java and JavaScript, although I did have a few months of Clojure development in a scheduled-for-but-put-on-hold-for-business-reasons production application. Plus also throwing in occasional forays into Bash and Python, or whatever, when I need something quick and dirty that I'll likely throw away. I'm nowhere near the best developer in the world, but nowhere near the worst either.
 
 Within Java I was and am a rigorous [TDD](http://en.wikipedia.org/wiki/Test-driven_development)'er, a fan of [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles, a proponent of minimizing mutability, a supporter of functional techniques. I like static typing, and I like to find my silly coding mistakes early. Despite my attempt to cultivate a [neckbeard](https://twitter.com/NeckbeardHacker) I have no experience of [Haskell](http://www.haskell.org/haskellwiki/Haskell). What have I done that you should listen to a word I have to say? Nothing really, I haven't found mindshare with a new programming language, or saved trillions of Altairian dollars conceiving the one true web framework, or even worked on something you'll have heard of. But you've somehow ended up reading my ramblings here, so I'd suggest I'm probably not distracting you from curing world hunger, so what have you got to lose?
 
-###The Good Things&trade; With Scala###
+###T he Good Things&trade; With Scala
 
 It would take the most ardent Java fanboy to claim there is nothing good about Scala. I'm not married to Java, so I don't have to view it through rose-tinted glasses, or defend its honour. I don't really have a dog in this fight. Languages will come and go, and [COBOL developers can still make a living](https://www.google.co.uk/search?q=cobol+jobs), so I'm not personally invested in disparaging Scala for funsies. Of course if you're a zealot, on either side, you're going to go ahead and claim I'm biased, or I have an agenda.
 
 So what good can I see in Scala?
 
-####Lambdas####
+#### Lambdas
 
 ... or closures or whatever you want to label "syntax and library support for passing functions around". Although technically that definition is met by Java's anonymous inner class construct, you would have to be a babbling fool not to concede that Scala's syntax and current library support is just plain _better_. The introduction of JDK 8's lambda syntax may make it a more interesting comparison, but for now, Scala's miles ahead. Consider this predicate `( x => x.isInteresting )`: the Java equivalent will contain the declaration of the type of `x` 3 times, and is also likely to be at least 3 lines of Java code with even the most aggressive vertical-space-saving formatting strategy. That's a bunch of boilerplate that has to live somewhere, and you have to train your brain to ignore it.
 
-####Functional Idioms in the Standard Libraries####
+#### Functional Idioms in the Standard Libraries
 
 Walking hand in hand with lambdas is the support available in the Scala SDK. Want to take a collection of elements, filter by some property, and convert the results into another type? `myStuff.filter(x => x.isInteresting).map(x => toNewThing(x))`[\*](#footnote_1) is right there, available as soon as you're in Scala land. In Java, this can be achieved once you add a library like Guava to your classpath, but as previously mentioned, there will be lot of noise that doesn't add anything. 
 
 I like functional operations. I like filter, map, zip, fold. I like that operation I can only seem to remember as 'groupBy' but probably has a more traditional name. I like immutability and programming without side-effects. I use those operations and program that way today in Java, supplemented by Guava. In Scala it's easier syntax and it's more easily available.
 
 
-####Type Inference####
+#### Type Inference
 
 There are a lot of places in Scala where you can omit type information. `val x = "Hello"` is a simple example. The compiler is a clever cookie, and realises that you probably mean `val x: String = "Hello"`, so you don't need to bother telling it that. A tiny smattering of type inference exists in Java, but it's not in the same league. 
 
 There's a double-edged sword here, in that now you have the ability to omit type information, you will omit type information, even when it would be useful to include it. Care needs to be taken to make sure that type inference is actually helping to make code clearer. Everyone who commits a chunk of code relying on type inference should be forced to play a game of "Pin The Tail On The Type". First blindfold the author, spin them round a couple of times, then expose them to the code they've just written. If they can't immediately identify all the types necessary to understand what's going on, you get to hit them with sticks until candy falls out. That last bit might be a different game I've mixed in.
 
 
-####Case Classes####
+#### Case Classes
 
 I bloody love case classes. Again, you'd have to be a couple of patents short of a troll-portfolio to argue that case classes don't provide something that's sorely lacking in Java. If you prefer generating: a constructor; getter methods (forget the setters, immutability ftw); toString and hashCode, then you're a crazy person. 
 
@@ -55,7 +55,7 @@ Case classes also supply a `copy()` method that pretty much renders the [Builder
 
 In a hypothetical world where I am offered a choice between introducing either lambdas or case classes to Java, I may find it hard to make the decision, that's how fond I am of case classes. 
 
-###Other Miscellaneous Good Things&trade;###
+### Other Miscellaneous Good Things&trade;
 
 I won't go into much detail here, but some other good things are:  
 
@@ -66,15 +66,15 @@ I won't go into much detail here, but some other good things are:
  
 Hopefully I've convinced you that I'm not a foamy-mouthed Scala hater, having spent over 1000 words describing my favourite bits. That should give me a bit of credibility for some of the bitching and moaning that's on it's way.
 
-###The Bad Things&trade; With Scala###
+### The Bad Things&trade; With Scala 
 
-####Compile Time####
+#### Compile Time
 
 Let's just get it out of the way. The amount of time that Scala needs to compile is bad. [XKCD-swivel-chair-swordfighting bad](http://xkcd.com/303/). I find that comic funny because, as I have found with Scala, it's [true](https://twitter.com/Grundlefleck/status/328839382922571776). I never understood those dynamic language guys who preferred tests over static types. Now I get their point. I feel like I could write all the tests I need to cover weaknesses in Java's type system, and have them all run quicker than the Scala compiler does. That feedback loop is important to me. I don't like it when I make a small change, re-run a unit test, and it takes 15 seconds to even start running the test. I'm not working on a big codebase. I have a powerful machine. I have what is considered the best IDE for Scala (IntelliJ). Running in the Play! (well, sbt) console improves this slightly, but still compile time is distractingly long.
 
 Of course, as mentioned, despite slow compile time being supremely frustrating, Martin Odersky is brimming with reasonableness in [describing why](http://stackoverflow.com/a/3612212/4120). Perhaps each time I'm waiting on a compile I can use the time to re-read that post, to keep me calm. 
 
-####The IDEs####
+#### The IDEs
 
 I alluded to this before, but I never realised how much I was giving up in the IDE department when switching from Java to Scala. I thought, well, Scala is a statically typed language, there's no reason the support won't be as good. And I keep hearing Scala advocates saying IDEs are improving leaps and bounds. Well, they might be, but improving on "terrible" doesn't necessarily mean the result is anywhere near "good".
 
@@ -86,12 +86,12 @@ I can already hear the Scalaist's response: "An IDE is proof your language sucks
 
 And that's about it. That's the most important things an IDE offers me. You could argue "Well, you should just name your thing right the first time, and design your types carefully upfront so they never need to change". You could argue that, but that would be dumb. The point you would be missing is that a lot of the times, the names _were_ right the first time, but now they're not, things have changed. Types _were_ carefully chosen, but now they need to adapt to suit some new, unforeseen requirement, because things have changed. For me, an IDE is not about mindlessly clicking your way through another graphical wizard to spit out XML config documents for Yet Another Framework. Being able to rename and extract is an important factor in keeping the "soft" in "software". IDEs for Scala are not as good as those for Java in the bits that matter.
 
-####Overuse of Operator Overloading####
+#### Overuse of Operator Overloading
 
 Yes, yes, it's not operator overloading, it's allowing symbols for method names, totally different. You're right; it's much worse. You can still overload those comfortable, familiar operators, like `+` or `*` to do unexpected things. Not only that, you can use whole raft of unexpected symbols to do unexpected things. Symbols are great when they confer meaning. Over several years in school I learned what many symbols mean: `+`, `-`, `/`, `*`, `~` all have meaning. Seeing `BigDecimal a = x.plus(y)` is a drag compared to `a = x + y`. Brilliant use of the `+` symbol as a method name. But now let's take sbt as an example. Using the `%` symbol to delimit artefact coordinate information is unnecessary and _gratuitous_. Using `%%` to mean, very specifically, "append the version of Scala to the version of this dependency" is a slap in the face to the principle of least astonishment. This, dare I say it, "spiteful" use of symbols as method names appears in several of the libraries I've been working with: 
 ScalaQuery; specs2; Akka. Ironically, the least friendly of them all, scalaz, actually gets a pass in my book. It's so thoroughly laden with unfamiliar symbols, like `|@|`, `<$>` and `<<*>>` (all pronounced "pleasejustletmeusehaskell") that they at least serve as a warning. That usage of symbols is fine if your goal is to provide a library with more functional concepts than the Scala SDK. Not cool if you are the de facto standard build tool, that virtually all projects will need. 
  
-####Implicit####
+#### Implicit
 
 The implicit keyword is one of my least favourite Scala language constructs. Take implicit parameters for example. It used to be you would have functions, and they would take arguments. To be able to drop some of the arguments for whatever reason, you could partially apply the function with the arguments you want to leave off. Java's typically verbose version is to have a class reference it's own instance fields in a method (watch the functional weenies writhe in agony over that comparison). Alternatively you could create a function which closed over a variable in scope. Now Scala allows you to have an implicit parameter, which means somewhere in the code there can be a declaration that says "if you're looking for something of type Foo to pass to some method, use me". Then when you invoke the method, if you have that declaration in scope, you don't have to actually reference it to pass it to the method, Scala's compiler will look it up for you. 
 
@@ -105,7 +105,7 @@ One argument I've seen in favour of Scala's implicit conversions is that "Java a
 
 If you think that makes no sense, try debugging an accidentally and silently "missed" implicit conversion in ScalaQuery's DSL. 
 
-####The Shallow End/Deep End False Dichotomy####
+#### The Shallow End/Deep End False Dichotomy
 
 It has been touted that Scala allows you to wade into the shallow end of the pool, using only the features that you're [comfortable with](http://pages.zeroturnaround.com/rs/zeroturnaround/images/Scala2013-A-Pragmatic-Guide-To-Adoption.pdf). From there, you can progress to the deep end, treading water over more advanced features at your own pace. Sounds good, right? Until you realise that, by accident or not, each library developer pulls you out of the shallow end, throws you straight into the deep end, and stands on your head until the bubbles of program comprehension escaping from your lungs cease to go 'bloop'. As soon as you want to do any production, business web application development, there's a bunch of stuff you're probably going to need to do, for example, route HTTP requests, make database calls, serve HTML and JSON/XML, write tests for it all. Unless you want to sink time into reimplementing this common stuff, you're going to reach for a library that can help. As alluded to previously, the people 
 who like to release libraries for new languages also like to experiment with language features. Unless the goal of their project is to cater to Scala noobs, they'll cram every clever use of Scala into the client facing part of their library. Now is the point where you take a deep breath and hold it; you're in deeper water than you're capable of swimming in.
@@ -114,7 +114,7 @@ Of course, you can just use familiar old libraries from Java, but then you're ju
 
 I know, I know, "Whaaaa, poor me, all that stuff I get for free, created during time donated by volunteers, doesn't do what I want", right? Or perhaps "If you don't like it, why don't you contribute to making it better rather than whining?". Well that argument doesn't seem to apply to those who castigate Java and its free and open-source libraries, where pretty much everything has been handed to us without the need to pay or contribute in any way. We can't have it both ways.
 
-###It Doesn't Really Matter###
+### It Doesn't Really Matter
 
 I've given irrefutable scientific evidence on why Scala will make you less productive. Many will respond with fluff and opinions and many forms of bias, claiming they are already more productive in Scala. That's fine. I'm now going to go ahead and claim it doesn't really matter anyway.
 
@@ -126,7 +126,7 @@ What about all the wonderful things in the standard library? Yep, `filter` and `
 If I could flick a switch which: levelled me up in Scala; made the compiler fast; made the tools usable; and made the libraries sane, I probably would be more productive. Slightly. But I can't. So I'm investing my finite learning time, being less effective day-to-day, for limited gains. Learning syntax and library APIs are the low-return investments. Paradigms and techniques are where it's at, yo. 
 
 
-###Amdahl's Law For Programming Languages###
+### Amdahl's Law For Programming Languages
 
 ... or "Grahamdahl's Law" (my name is Graham, see what I did there?)
 
