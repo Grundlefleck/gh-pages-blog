@@ -26,3 +26,5 @@ We use one default blobstore for all repositories, proxy several public reposito
 Unlike deleting components, deleting the assets directly is very fast. Since I could traverse search results to access the asset IDs via the components I wanted to delete, it wasn't difficult to script, and I have been able to reclaim space.
 
 Because the setup uses nothing up-to-date (hardware, OS, JVM, Nexus version) I'm not sure how much value this bug report is. My motivation for raising this bug is to leave a breadcrumb for other poor souls who find themselves needing to clear space fast from an opaque blobstore, and are unsure how to workaround the problem that deleting a single component takes > 15 minutes. The answer appears to be to delete the underlying assets.
+
+Environment: Nexus version 3.16.2, Linux (Ubuntu Trusty 14.04) virtual machine, ext4 filesystem, spinning disk. 2x Intel Westmere CPU, 2.6GHz. 2Gb Java heap, 4G MaxDirectMemorySize, 12G of addressable memory.
